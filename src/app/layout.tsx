@@ -4,12 +4,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>
-        {/* Layout UI */}
-        <main>{children}</main>
-      </body>
-    </html>
-  );
+  return <html lang="en">{children}</html>;
 }
+
+// {/* <body>
+//   {/* Layout UI */}
+//   <main>{children}</main>
+// </body>; */}

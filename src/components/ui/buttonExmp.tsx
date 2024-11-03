@@ -5,20 +5,18 @@ import clsx from 'clsx';
 
 export interface ButtonExmpProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  disabled?: boolean;
+  children?: React.ReactNode;
 }
 
-export default function ButtonExmp({ disabled, ...rest }: ButtonExmpProps) {
-  console.log('ButtonExmp', rest);
+export default function ButtonExmp({ children, ...rest }: ButtonExmpProps) {
   return (
     <button
-      disabled={disabled}
       {...rest}
       className={clsx(
-        'py-2.5 px-5 w-56 bg-gray-900 text-zinc-50 text-base text-center font-medium rounded',
-        !disabled && 'hover:bg-gray-800 active:bg-gray-950',
-        disabled && 'text-zinc-100',
+        'w-56 rounded bg-gray-900 px-5 py-2.5 text-center text-base font-medium text-zinc-50'
       )}
-    />
+    >
+      {children}
+    </button>
   );
 }
