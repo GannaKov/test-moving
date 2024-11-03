@@ -6,18 +6,18 @@ import clsx from 'clsx';
 
 export interface HeaderProps {}
 const links = [
-  { name: 'Page_1', href: '/' },
+  { name: 'HOME SVITLANA', href: '/design-svitlana' },
   {
-    name: 'Page_2',
-    href: '/page2',
+    name: 'TEAM SVITLANA',
+    href: '/design-svitlana/team',
   },
-  { name: 'Page_3', href: '/page3' },
+  { name: 'PROJECTS SVITLANA', href: '/design-svitlana/projects' },
 ];
 export default function Header({}: HeaderProps) {
   const pathname = usePathname();
   return (
-    <header className="flex w-full  px-3   justify-center ">
-      <nav className="flex w-3/4 justify-between ">
+    <header className="flex w-full justify-center px-3">
+      <nav className="flex w-3/4 justify-between">
         {links.map((link) => (
           <Link
             className={clsx('py-4', {

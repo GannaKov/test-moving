@@ -1,20 +1,21 @@
-import ButtonExmp from './ui/buttonExmp';
-import StatusExmpl, { Status } from './ui/statusExmpl';
-import StatusWithClxs from './ui/statusWithClxs';
+import ButtonExmp from '../components/ui/buttonExmp';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <h1>Home Page</h1>
-      <p className="text-xl">Welcome to the home page.</p>
-      <StatusExmpl status={Status.NotActive}>Not Active</StatusExmpl>
-      <StatusExmpl status={Status.Active}>Active</StatusExmpl>
-      <div>
-        <StatusWithClxs status={Status.NotActive} disabled>
-          Disabled
-        </StatusWithClxs>
-        <StatusWithClxs status={Status.Active}>Active</StatusWithClxs>
+    <div className="flex min-h-screen justify-center">
+      <div className="flex min-h-screen flex-col items-center justify-center p-6">
+        <h1 className="mb-2">ПРИВІТ</h1>
+        <h2 className="mb-2">У нас є два чудові дизайни</h2>
+        <h3 className="mb-2">Зараз ми виберемо для тебе</h3>
+        <p className="mb-2 text-xl">
+          Але потім ти обов&apos;язково натисніть на таку кнопку 👉{' '}
+          <span className="h-10 w-20 border border-slate-800">
+            Зразок кнопки
+          </span>
+        </p>
+        <p className="text-l mb-2">І подивися нашу іншу версію</p>
+        <ButtonExmp>Click me</ButtonExmp>
       </div>
-      <ButtonExmp disabled>Click me</ButtonExmp>
-    </main>
+    </div>
   );
 }
