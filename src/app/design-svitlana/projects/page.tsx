@@ -1,12 +1,18 @@
+import Link from 'next/link';
+
 import ButtonExmp from '@/components/ui/buttonExmp';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
+    <div className="flex min-h-screen flex-col p-6">
       <h1>HI !!! I am SVITLANA PROJETS Page</h1>
-      <p className="text-xl">Welcome to the home page.</p>
+      <p className="text-xl">Welcome to the SVITLANA PROJETS Page</p>
 
-      <ButtonExmp disabled>Click me</ButtonExmp>
-    </main>
+      <ButtonExmp>
+        <Link className="w-full" href={'/design-olga/projects'}>
+          To Olga
+        </Link>
+      </ButtonExmp>
+    </div>
   );
 }

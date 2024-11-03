@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ButtonExmp from '@/components/ui/buttonExmp';
 
 export default function Home() {
@@ -6,7 +7,11 @@ export default function Home() {
       <h1>HI !!! I am OLGA Home Page</h1>
       <p className="text-xl">Welcome to the home page.</p>
 
-      <ButtonExmp disabled>Click me</ButtonExmp>
+      <ButtonExmp>
+        <Link className="w-full" href={'/design-svitlana'}>
+          To Svitlana
+        </Link>
+      </ButtonExmp>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Home() {
     const olgaLink = '/design-olga';
 
     let link = randomVariant === 'olga' ? olgaLink : svitlanaLink;
-    console.log('choose', link);
+
     setSelectedLink(link);
   }, []);
 
@@ -34,7 +34,9 @@ export default function Home() {
             </p>
             <p className="text-l mb-2">І подивися нашу іншу версію</p>
             <ButtonExmp>
-              <Link href={selectedLink}>Поїхали</Link>
+              <Link className="w-full" href={selectedLink}>
+                Поїхали
+              </Link>
             </ButtonExmp>
           </div>
         </div>

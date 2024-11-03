@@ -3,5 +3,5 @@ import React from 'react';
 export interface FooterProps {}
 
 export default function Footer({}: FooterProps) {
-  return <div>HERE FOOTER SVITLANA</div>;
+  return <footer>HERE FOOTER SVITLANA</footer>;
 }

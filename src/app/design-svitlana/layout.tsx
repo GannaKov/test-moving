@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className={`${inter.className} antialiased`}>
+    <body className="bg-blue-500">
       <Header />
-      <main>{children}</main>
+      <main className="flex justify-center">{children}</main>
 
       <Footer />
     </body>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import ButtonExmp from '@/components/ui/buttonExmp';
 
 export default function Home() {
@@ -6,7 +8,9 @@ export default function Home() {
       <h1>HI !!! I am SVITLANA Home Page</h1>
       <p className="text-xl">Welcome to the home page.</p>
 
-      <ButtonExmp disabled>Click me</ButtonExmp>
+      <ButtonExmp disabled>
+        <Link href={'/design-olga'}>To Olga</Link>
+      </ButtonExmp>
     </div>
   );
 }

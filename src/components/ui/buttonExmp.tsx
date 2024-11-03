@@ -13,7 +13,7 @@ export default function ButtonExmp({ children, ...rest }: ButtonExmpProps) {
     <button
       {...rest}
       className={clsx(
-        'w-56 rounded bg-gray-900 px-5 py-2.5 text-center text-base font-medium text-zinc-50'
+        'flex h-10 w-56 items-center justify-center rounded bg-gray-900 text-center text-base font-medium text-zinc-50'
       )}
     >
       {children}
