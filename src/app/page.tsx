@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 export default function Home() {
   const [selectedLink, setSelectedLink] = useState<string>('');
-  // const router = useRouter();
 
   useEffect(() => {
     const randomVariant = Math.random() < 0.5 ? 'olga' : 'svitlana';

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { inter } from '@/components/ui/fonts';
 import Header from '@/components/layout/olga/header/header';
 import Footer from '@/components/layout/olga/footer/footer';
 

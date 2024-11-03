@@ -6,8 +6,3 @@ export default function RootLayout({
 }) {
   return <html lang="en">{children}</html>;
 }
-
-// {/* <body>
-//   {/* Layout UI */}
-//   <main>{children}</main>
-// </body>; */}

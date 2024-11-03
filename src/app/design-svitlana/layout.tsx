@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { inter } from '@/components/ui/fonts';
 import Header from '@/components/layout/svitlana/header/header';
 import Footer from '@/components/layout/svitlana/footer/footer';
 
