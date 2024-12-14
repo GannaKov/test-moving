@@ -1,7 +1,6 @@
 //app/layout.tsx
 import './globals.css';
-
-import { redirect } from 'next/navigation';
+import { DesignProvider } from '@/app/context/DesignContext';
 
 export default function RootLayout({
   children,
@@ -14,7 +13,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
       </head>
-      <body>{children}</body>
+      <DesignProvider>
+        <body>{children}</body>
+      </DesignProvider>
     </html>
   );
 }

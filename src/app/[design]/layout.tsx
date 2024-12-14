@@ -27,16 +27,15 @@ export default function RootLayout({ children }: LayoutProps) {
   //When not it not it ????
 
   return (
-    <body>
-      <DesignProvider>
-        <main>{children}</main>
-        <ButtonChangeDesigne />
-      </DesignProvider>
+    <>
+      <main>{children}</main>
+      <ButtonChangeDesigne />
+
       {/* {currentDesign === 'designByOlga' && <HeaderOlga />}
       {currentDesign === 'designBySvitlana' && <HeaderSvitlana />}
       <main>{children}</main>
       {currentDesign === 'designByOlga' && <FooterOlga />}
       {currentDesign === 'designBySvitlana' && <FooterSvitlana />} */}
-    </body>
+    </>
   );
 }

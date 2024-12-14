@@ -20,19 +20,19 @@ const DesignContext = createContext<DesignContextProps | undefined>(undefined);
 export function DesignProvider({ children }: { children: ReactNode }) {
   const [designType, setDesignType] = useState<DesignType>(() => {
     // From local Storage or random
-    if (typeof window !== 'undefined') {
-      const storedDesign = localStorage.getItem('designType') as DesignType;
-      return (
-        storedDesign ||
-        (Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana')
-      );
-    }
-    return 'designByOlga'; // by default
+    //if (typeof window !== 'undefined') {
+    // const storedDesign = localStorage.getItem('designType') as DesignType;
+    // return (
+    //   storedDesign ||
+    //   (Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana')
+    // }
+    // return 'designByOlga'; // by default
+    return Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana';
   });
   console.log('designType in Context', designType);
-  useEffect(() => {
-    localStorage.setItem('designType', designType);
-  }, [designType]);
+  // useEffect(() => {
+  //   localStorage.setItem('designType', designType);
+  // }, [designType]);
 
   return (
     <DesignContext.Provider value={{ designType, setDesignType }}>
