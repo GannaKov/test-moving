@@ -1,3 +1,4 @@
+//app/[...design]/зфпу.tsx
 'use client';
 import HomeSectionOlga from '@/components/section/home/designByOlga/HomeSectionOlga';
 import HomeSectionSvitlana from '@/components/section/home/designBySvitlana/HomeSectionSvitlana';
