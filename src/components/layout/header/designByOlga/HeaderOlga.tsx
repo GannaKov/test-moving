@@ -6,12 +6,12 @@ import clsx from 'clsx';
 
 export interface HeaderProps {}
 const links = [
-  { name: 'HOME OLGA', href: '/design-olga' },
+  { name: 'HOME OLGA', href: '/designByOlga' },
   {
     name: 'TEAM OLGA',
-    href: '/design-olga/team',
+    href: '/designByOlga/team',
   },
-  { name: 'PROJECTS OLGA', href: '/design-olga/projects' },
+  { name: 'PROJECTS OLGA', href: '/designByOlga/projects' },
 ];
 export default function HeaderOlga({}: HeaderProps) {
   const pathname = usePathname();

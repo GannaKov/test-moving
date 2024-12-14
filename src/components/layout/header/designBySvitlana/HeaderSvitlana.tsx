@@ -6,12 +6,12 @@ import clsx from 'clsx';
 
 export interface HeaderProps {}
 const links = [
-  { name: 'HOME SVITLANA', href: '/design-svitlana' },
+  { name: 'HOME SVITLANA', href: '/designBySvitlana' },
   {
     name: 'TEAM SVITLANA',
-    href: '/design-svitlana/team',
+    href: '/designBySvitlana/team',
   },
-  { name: 'PROJECTS SVITLANA', href: '/design-svitlana/projects' },
+  { name: 'PROJECTS SVITLANA', href: '/designBySvitlana/projects' },
 ];
 export default function HeaderSvitlana({}: HeaderProps) {
   const pathname = usePathname();

@@ -5,7 +5,7 @@ import {
   useContext,
   useState,
   ReactNode,
-  useEffect,
+  // useEffect,
 } from 'react';
 
 type DesignType = 'designByOlga' | 'designBySvitlana';
