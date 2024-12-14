@@ -1,9 +1,8 @@
 'use client';
+import React from 'react';
+import { useDesignContext } from '../../context/DesignContext';
 import TeamSectionOlga from '@/components/section/team/designByOlga/TeamSectionOlga';
 import TeamSectionSvitlana from '@/components/section/team/designBySvitlana/TeamSectionSvitlana';
-import React from 'react';
-import ButtonExmp from '@/components/ui/buttonExmp';
-import { useDesignContext } from '../../context/DesignContext';
 
 // Can be so!!!!
 // export default function TeamPage({ params }: TeamPageProps) {

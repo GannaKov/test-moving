@@ -8,7 +8,7 @@ import { useDesignContext } from '@/app/context/DesignContext';
 export default function RootPage() {
   const router = useRouter();
   const { designType } = useDesignContext();
-  console.log('in Page', designType);
+
   useEffect(() => {
     router.push(`/${designType}`);
   }, [designType, router]);

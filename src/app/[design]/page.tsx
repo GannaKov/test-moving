@@ -1,4 +1,4 @@
-//app/[...design]/page.tsx
+//app/[design]/page.tsx
 'use client';
 import React from 'react';
 import { useDesignContext } from '@/app/context/DesignContext';

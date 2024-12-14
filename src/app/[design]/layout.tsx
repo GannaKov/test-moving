@@ -1,7 +1,7 @@
 //app/[design]/layout.tsx
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { usePathname } from 'next/navigation';
+
 import ButtonChangeDesigne from '@/components/ui/ButtonChangeDesigne';
 import Header from '@/components/layout/header/header';
 import Footer from '@/components/layout/footer/footer';
@@ -26,8 +26,8 @@ interface LayoutProps {
 // }
 
 export default function RootLayout({ children, params }: LayoutProps) {
-  //When not it not it ????
-  console.log('params', params);
+  //When not this and  not this
+
   const design = params.design;
   if (!ALLOWED_DESIGNS.includes(design)) {
     notFound();

@@ -4,18 +4,20 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
 import { useDesignContext } from '@/app/context/DesignContext';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 function ButtonChangeDesigne() {
   const [isOpenButton, setIsOpenButton] = useState<boolean>(false);
   const { designType, setDesignType } = useDesignContext();
   const router = useRouter();
+  const pathname = usePathname();
 
   const toggleDesignType = () => {
     const newDesign =
       designType === 'designByOlga' ? 'designBySvitlana' : 'designByOlga';
     setDesignType(newDesign);
-    // router.push(`/${newDesign}`);
+    const newPathname = pathname.replace(`/${designType}`, `/${newDesign}`);
+    router.push(newPathname);
   };
   return (
     <motion.div

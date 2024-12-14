@@ -1,7 +1,7 @@
-//app/[...design]/[...rest]
+//app/[design]/[...rest]
+// I think I do not need it any more
 import { notFound } from 'next/navigation';
 
 export default function CatchAllPage() {
-  console.log('in Rest');
   notFound();
 }

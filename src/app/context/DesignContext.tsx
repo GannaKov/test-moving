@@ -7,6 +7,7 @@ import {
   ReactNode,
   // useEffect,
 } from 'react';
+import { usePathname } from 'next/navigation';
 
 type DesignType = 'designByOlga' | 'designBySvitlana';
 
@@ -18,8 +19,14 @@ interface DesignContextProps {
 const DesignContext = createContext<DesignContextProps | undefined>(undefined);
 
 export function DesignProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+
+  const segments = pathname?.split('/');
+
+  const designFromURL = segments?.[1] as DesignType;
   const [designType, setDesignType] = useState<DesignType>(() => {
-    // From local Storage or random
+    //
+    //// var 1 local Storage or random
     //if (typeof window !== 'undefined') {
     // const storedDesign = localStorage.getItem('designType') as DesignType;
     // return (
@@ -27,9 +34,20 @@ export function DesignProvider({ children }: { children: ReactNode }) {
     //   (Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana')
     // }
     // return 'designByOlga'; // by default
+    ////var 2 only random
+    // return Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana';
+    //// var 3 check pathname
+    if (
+      designFromURL === 'designByOlga' ||
+      designFromURL === 'designBySvitlana'
+    ) {
+      return designFromURL;
+    }
+
     return Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana';
   });
-  console.log('designType in Context', designType);
+  console.log('designType in context', designType);
+  // for local storage
   // useEffect(() => {
   //   localStorage.setItem('designType', designType);
   // }, [designType]);
