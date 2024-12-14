@@ -13,7 +13,7 @@ const links = [
   },
   { name: 'PROJECTS OLGA', href: '/design-olga/projects' },
 ];
-export default function Header({}: HeaderProps) {
+export default function HeaderOlga({}: HeaderProps) {
   const pathname = usePathname();
   return (
     <header className="flex w-full justify-center px-3">

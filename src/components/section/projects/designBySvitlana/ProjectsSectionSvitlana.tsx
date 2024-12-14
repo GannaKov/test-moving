@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import ButtonExmp from '@/components/ui/buttonExmp';
 
-export default function Home() {
+export default function ProjectsSectionSvitlana() {
   return (
     <div className="flex min-h-screen flex-col p-6">
       <h1>HI !!! I am SVITLANA PROJETS Page</h1>

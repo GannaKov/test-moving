@@ -13,7 +13,7 @@ const links = [
   },
   { name: 'PROJECTS SVITLANA', href: '/design-svitlana/projects' },
 ];
-export default function Header({}: HeaderProps) {
+export default function HeaderSvitlana({}: HeaderProps) {
   const pathname = usePathname();
   return (
     <header className="flex w-full justify-center px-3">
