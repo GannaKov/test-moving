@@ -21,11 +21,13 @@ export function DesignProvider({ children }: { children: ReactNode }) {
   const [designType, setDesignType] = useState<DesignType>(() => {
     // From local Storage or random
     if (typeof window !== 'undefined') {
+      const storedDesign = localStorage.getItem('designType') as DesignType;
       return (
-        (localStorage.getItem('designType') as DesignType) || 'designByOlga'
+        storedDesign ||
+        (Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana')
       );
     }
-    return Math.random() < 0.5 ? 'designByOlga' : 'designBySvitlana';
+    return 'designByOlga'; // by default
   });
   console.log('designType in Context', designType);
   useEffect(() => {
@@ -40,11 +42,10 @@ export function DesignProvider({ children }: { children: ReactNode }) {
 }
 
 export function useDesignContext() {
-  console.log('in useContext 1');
   const context = useContext(DesignContext);
   if (!context) {
     throw new Error('useDesignContext must be used within a DesignProvider');
   }
-    console.log('in useContext 2');
+
   return context;
 }

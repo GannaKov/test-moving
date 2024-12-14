@@ -2,12 +2,21 @@
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { useDesignStore } from '@/useDesignStore';
+
+import { useDesignContext } from '@/app/context/DesignContext';
+import { useRouter } from 'next/navigation';
 
 function ButtonChangeDesigne() {
   const [isOpenButton, setIsOpenButton] = useState<boolean>(false);
-  const { designType, toggleDesignType } = useDesignStore();
+  const { designType, setDesignType } = useDesignContext();
+  const router = useRouter();
 
+  const toggleDesignType = () => {
+    const newDesign =
+      designType === 'designByOlga' ? 'designBySvitlana' : 'designByOlga';
+    setDesignType(newDesign);
+    // router.push(`/${newDesign}`);
+  };
   return (
     <motion.div
       onHoverStart={() => setIsOpenButton(true)}
@@ -32,7 +41,7 @@ function ButtonChangeDesigne() {
           aria-label="Змінити дизайн"
           className={clsx(
             'h-6 w-6 rounded-full border-[2px] border-solid border-white',
-            designType === 'designBySvitlana' ? 'bg-[#8f8ded]' : 'bg-olga-green'
+            designType === 'designBySvitlana' ? 'bg-[#8f8ded]' : 'bg-[#d3fd50]'
           )}
         ></motion.button>
 
