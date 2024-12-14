@@ -16,7 +16,7 @@ const links = [
 export default function HeaderSvitlana({}: HeaderProps) {
   const pathname = usePathname();
   return (
-    <header className="flex w-full justify-center px-3">
+    <header className="flex w-full justify-center bg-[#8f8ded] px-3 text-white">
       <nav className="flex w-3/4 justify-between">
         {links.map((link) => (
           <Link

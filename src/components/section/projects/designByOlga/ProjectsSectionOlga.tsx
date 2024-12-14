@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import ButtonExmp from '@/components/ui/buttonExmp';
-
 export default function ProjectsSectionOlga() {
   return (
     <div className="flex min-h-screen flex-col p-6">

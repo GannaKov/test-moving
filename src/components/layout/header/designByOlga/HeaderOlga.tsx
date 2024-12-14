@@ -16,7 +16,7 @@ const links = [
 export default function HeaderOlga({}: HeaderProps) {
   const pathname = usePathname();
   return (
-    <header className="flex w-full justify-center px-3">
+    <header className="flex w-full justify-center bg-[#d3fd50] px-3">
       <nav className="flex w-3/4 justify-between">
         {links.map((link) => (
           <Link

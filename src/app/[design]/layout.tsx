@@ -4,10 +4,8 @@ import { DesignProvider } from '@/app/context/DesignContext';
 
 import ButtonChangeDesigne from '@/components/ui/ButtonChangeDesigne';
 // import InitializeDesign from '@/components/ui/InitializeDesign';
-import HeaderOlga from '@/components/layout/header/designByOlga/HeaderOlga';
-import FooterOlga from '@/components/layout/footer/designByOlga/FooterOlga';
-import HeaderSvitlana from '@/components/layout/header/designBySvitlana/HeaderSvitlana';
-import FooterSvitlana from '@/components/layout/footer/designBySvitlana/FooterSvitlana';
+import Header from '@/components/layout/header/header';
+import Footer from '@/components/layout/footer/footer';
 
 export const metadata: Metadata = {
   title: 'Все, що рухається',
@@ -28,14 +26,11 @@ export default function RootLayout({ children }: LayoutProps) {
 
   return (
     <>
-      <main>{children}</main>
+      <Header />
+          <main>{children}</main>
+          <Footer/>
       <ButtonChangeDesigne />
 
-      {/* {currentDesign === 'designByOlga' && <HeaderOlga />}
-      {currentDesign === 'designBySvitlana' && <HeaderSvitlana />}
-      <main>{children}</main>
-      {currentDesign === 'designByOlga' && <FooterOlga />}
-      {currentDesign === 'designBySvitlana' && <FooterSvitlana />} */}
     </>
   );
 }

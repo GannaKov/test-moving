@@ -64,7 +64,7 @@ function ButtonChangeDesigne() {
               aria-label="Змінити дизайн"
               className={clsx(
                 'absolute h-6 w-6 rounded-full border-[2px] border-solid border-white',
-                designType === 'designByOlga' ? 'bg-[#8f8ded]' : 'bg-olga-green'
+                designType === 'designByOlga' ? 'bg-[#8f8ded]' : 'bg-[#d3fd50]'
               )}
             ></motion.button>
           )}
